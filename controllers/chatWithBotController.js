@@ -64,7 +64,8 @@ export const chatWithBot = async (req, res) => {
       {
         headers: {
           Authorization: `Bearer ${process.env.OPEN_ROUTER_API}`,
-          "HTTP-Referer": "http://localhost:3000", // Your frontend URL
+          "HTTP-Referer":
+            "https://mind-care-frontend-git-main-ayush-singhs-projects-fc5967f1.vercel.app", // Your frontend URL
           "Content-Type": "application/json",
         },
       }

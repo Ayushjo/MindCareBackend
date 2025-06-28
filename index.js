@@ -11,7 +11,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend URL
+    origin:
+      "https://mind-care-frontend-git-main-ayush-singhs-projects-fc5967f1.vercel.app", // Your frontend URL
     credentials: true, // Allow credentials (cookies)
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
