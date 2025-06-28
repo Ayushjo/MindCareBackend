@@ -56,7 +56,7 @@ export const chatWithBot = async (req, res) => {
     const response = await axios.post(
       "https://openrouter.ai/api/v1/chat/completions",
       {
-        model: "mistralai/mistral-7b-instruct",
+        model: "anthropic/claude-3-haiku",
         messages: messagesWithSystemPrompt,
         max_tokens: 150, // Limit response length
         temperature: 0.7, // Balanced creativity and consistency
