@@ -36,7 +36,7 @@ import moodRoutes from "./routes/moodRoutes.js"
 import journalRoutes from "./routes/journalRoutes.js"
 app.use(
   cors({
-    origin: "https://mindcaree.vercel.app", // Your frontend URL
+    origin: "https://mindcare.iayush.com", // Your frontend URL
     credentials: true, // Allow credentials (cookies)
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
