@@ -9,15 +9,6 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin:
-      "https://mind-care-frontend-git-main-ayush-singhs-projects-fc5967f1.vercel.app", // Your frontend URL
-    credentials: true, // Allow credentials (cookies)
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
 app.use(express.json());
 app.use(cookieParser());
 
@@ -43,6 +34,14 @@ import userRoutes from "./routes/userRoutes.js"
 import chatWithBotRouter from "./routes/chatWithBotRoute.js"
 import moodRoutes from "./routes/moodRoutes.js"
 import journalRoutes from "./routes/journalRoutes.js"
+app.use(
+  cors({
+    origin: "https://mindcaree.vercel.app/", // Your frontend URL
+    credentials: true, // Allow credentials (cookies)
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use("/api/users",userRoutes)
 app.use("/api/users",chatWithBotRouter)
 app.use("/api/mood",moodRoutes)
