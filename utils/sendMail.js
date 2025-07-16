@@ -17,12 +17,11 @@ export const sendEmail = async ({ email, emailType, userId }) => {
       });
     }
 
-    // Looking to send emails in production? Check out our Email API/SMTP product!
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.GMAIL_USER, // your Gmail
-        pass: process.env.GMAIL_APP_PASS, // app-specific password
+        user: process.env.GMAIL_USER, 
+        pass: process.env.GMAIL_APP_PASS, 
       },
     });
 
